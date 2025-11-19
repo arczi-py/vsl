@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VSL</title>
+  <style>
+    /* Mobile-first styles */
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .page {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 16px 24px;
+      box-sizing: border-box;
+      background-color: #ffffff;
+    }
+
+    #vsl,
+    #calendly {
+      text-align: center;
+    }
+
+    section {
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 28px;
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin: 0 0 12px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 0 0 8px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0 0 20px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    button {
+      margin-top: 16px;
+      padding: 14px 24px;
+      width: 100%;
+      max-width: 320px;
+      font-size: 16px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background-color: #2563eb;
+      color: #ffffff;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .calendly-inline-widget {
+      width: 100% !important;
+      min-width: 100% !important;
+      height: 600px !important;
+    }
+
+    .social-section {
+      text-align: center;
+    }
+
+    .section-subtitle {
+      color: #4b5563;
+      margin-bottom: 16px;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .social-item {
+      background-color: #f9fafb;
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .social-item-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .social-video,
+    .social-image {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 6px;
+      overflow: hidden;
+      background-color: #e5e7eb;
+    }
+
+    .social-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .cta-section {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    .story-section {
+      margin-top: 32px;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .story-card {
+      background-color: #f9fafb;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: left;
+    }
+
+    .faq-section {
+      margin-top: 32px;
+    }
+
+    .faq-item {
+      background-color: #f9fafb;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: left;
+      margin-bottom: 12px;
+    }
+
+    .faq-item h3 {
+      font-size: 16px;
+      margin: 0 0 6px;
+    }
+
+    .faq-item p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .footer {
+      border-top: 1px solid #e5e7eb;
+      margin-top: 24px;
+      padding-top: 16px;
+      text-align: center;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    /* Desktop / larger screens */
+    @media (min-width: 768px) {
+      .page {
+        padding: 24px 24px 32px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      button {
+        font-size: 18px;
+      }
+
+      .social-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .story-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .video-wrapper {
+        padding-bottom: 40%;
+      }
+
+      section {
+        margin-bottom: 32px;
+      }
+
+      .calendly-inline-widget {
+        height: 700px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section id="vsl">
+      <h1>Chcesz wydać trochę hajsu?</h1>
+      <h2>Chętnie pomożemy Ci spożytkować wszystkie dostępne fundusze.</h2>
+
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/P81dOY6pu70?si=s1KKEqYI1w3vls7j"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <button onclick="document.getElementById('calendly').scrollIntoView({ behavior: 'smooth' });">
+        Umów darmową konsultację
+      </button>
+    </section>
+
+    <section id="calendly">
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/jakub-karst53/coaching-call-jakub-karst?month=2025-11"
+           style="min-width:320px;height:700px;"></div>
+      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </section>
+
+
+    <section id="story" class="story-section">
+      <h2>Twoja historia w 4 krokach</h2>
+      <div class="story-grid">
+        <div class="story-card">
+          <h3>Problem</h3>
+          <p>Z czym na co dzień zmaga się Twój idealny klient? Tutaj w 2–3 zdaniach opisz jego obecną sytuację.</p>
+        </div>
+        <div class="story-card">
+          <h3>Moment „dość tego” / przełom</h3>
+          <p>Krótka scena przełomu: kiedy klient mówi sobie, że tak dalej być nie może.</p>
+        </div>
+        <div class="story-card">
+          <h3>Odkrycie rozwiązania</h3>
+          <p>Jak trafił na Twoją metodę lub usługę i co go do niej przekonało.</p>
+        </div>
+        <div class="story-card">
+          <h3>Efekty</h3>
+          <p>Konkrety: liczby, wyniki, odczucia – Twoje lub klientów, które pokazują zmianę.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="social-proof-videos" class="social-section">
+      <h2>Opinie klientów – wideo</h2>
+      <p class="section-subtitle">Miejsce na 6 filmów z YouTube (3 kolumny × 2 wiersze).</p>
+      <div class="social-grid">
+        <div class="social-item">
+          <div class="social-item-title">Tytuł wideo 1</div>
+          <div class="social-video"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Tytuł wideo 2</div>
+          <div class="social-video"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Tytuł wideo 3</div>
+          <div class="social-video"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Tytuł wideo 4</div>
+          <div class="social-video"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Tytuł wideo 5</div>
+          <div class="social-video"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Tytuł wideo 6</div>
+          <div class="social-video"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta-mid" class="social-section cta-section">
+      <h2>Gotowy, żeby zrobić kolejny krok?</h2>
+      <p class="section-subtitle">Umów darmową konsultację i zobacz, jak możemy Ci pomóc.</p>
+      <button onclick="document.getElementById('calendly').scrollIntoView({ behavior: 'smooth' });">
+        Umów darmową konsultację
+      </button>
+    </section>  
+
+    <section id="social-proof-gallery" class="social-section">
+      <h2>Rezultaty klientów – zrzuty ekranu</h2>
+      <p class="section-subtitle">Miejsce na 9 zrzutów ekranu / zdjęć (3 kolumny × 3 wiersze).</p>
+      <div class="social-grid">
+        <div class="social-item">
+          <div class="social-item-title">Case study 1</div>
+          <div class="social-image"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Case study 2</div>
+          <div class="social-image"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Case study 3</div>
+          <div class="social-image"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Case study 4</div>
+          <div class="social-image"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Case study 5</div>
+          <div class="social-image"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Case study 6</div>
+          <div class="social-image"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Case study 7</div>
+          <div class="social-image"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Case study 8</div>
+          <div class="social-image"></div>
+        </div>
+        <div class="social-item">
+          <div class="social-item-title">Case study 9</div>
+          <div class="social-image"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <h2>Najczęściej zadawane pytania</h2>
+      <div class="faq-item">
+        <h3>Jak wygląda darmowa konsultacja?</h3>
+        <p>Podczas 30–45 minutowego spotkania analizujemy Twoją sytuację, cele i pokazujemy możliwe scenariusze współpracy.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Czy konsultacja do czegoś zobowiązuje?</h3>
+        <p>Nie. Po rozmowie możesz samodzielnie wdrożyć wskazówki lub zdecydować się na dalszą współpracę.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Dla kogo jest ta oferta?</h3>
+        <p>Dla osób, które chcą świadomie inwestować budżet w rozwój swojego biznesu i oczekują konkretnych efektów.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Co jeśli termin mi nie pasuje?</h3>
+        <p>Zawsze możesz przełożyć spotkanie, korzystając z linku w mailu potwierdzającym rezerwację.</p>
+      </div>
+    </section>
+
+    <section id="cta-final" class="social-section cta-section">
+      <h2>Gotowy, żeby zacząć?</h2>
+      <p class="section-subtitle">Zarezerwuj darmową konsultację i sprawdź, czy to dla Ciebie.</p>
+      <button onclick="document.getElementById('calendly').scrollIntoView({ behavior: 'smooth' });">
+        Umów darmową konsultację
+      </button>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 Twoja Marka. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+  </div>
+</body>
+</html>
+
