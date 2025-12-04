@@ -21,7 +21,7 @@
     }
 
     .gradient-text {
-      background: linear-gradient(90deg, #007cff 0%, #00d4ff 100%);
+      background: linear-gradient(90deg, #00d4ff 0%, #007cff 100%); 
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -30,7 +30,7 @@
 
     .page {
       margin: 0 auto;
-      padding: 20px 16px 24px;
+      padding: 12px 12px 12px;
       box-sizing: border-box;
       background-color: #ffffff;
       width: 100%;
@@ -57,12 +57,12 @@
     }
 
     h2 {
-      font-size: 24px;
+      font-size: 30px;
       margin: 0 0 12px;
     }
 
     h3 {
-      font-size: 20px;
+      font-size: 24px;
       margin: 0 0 8px;
     }
 
@@ -106,12 +106,15 @@
       border-radius: 999px;
       border: none;
       cursor: pointer;
-      background-color: #2563eb;
+      background: linear-gradient(90deg, #00d4ff 0%, #007cff 100%);
       color: #ffffff;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
     }
 
     button:hover {
-      background-color: #1d4ed8;
+      opacity: 0.9;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 30px rgba(0, 124, 255, 0.25);
     }
 
     .calendly-inline-widget {
@@ -285,20 +288,61 @@
         height: 700px !important;
       }
     }
+.cta-scroll {
+  margin: 16px auto 12px;
+  padding: 16px 20px;
+  max-width: 340px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #00d4ff 0%, #007cff 100%);
+  color: #ffffff;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  text-align: center;
+}
+
+.cta-scroll p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.cta-scroll .arrow-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+  margin-top: 2px;
+}
+
+.cta-scroll:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(0, 124, 255, 0.25);
+}
+
   </style>
 </head>
 <body>
   <div class="page">
     <section id="vsl">
       <h1>Are you a <span class="gradient-text">fighter</span>, who wants to <span class="gradient-text">achieve top</span> results?</h1>
-      <h2>I will help you achieve the best results in dynamics, explosiveness, conditioning, and mobility</h2>
+      <h3>I will help you achieve the best results in ,<span class="gradient-text"> explosiveness, conditioning</span>, and <span class="gradient-text">mobility</span></h3>
 
       <div class="video-wrapper"><video controls playsinline><source src="https://github.com/arczi-py/vsl/releases/download/video-v1/vsl.mp4" type="video/mp4" />
           Your browser does not support the video element.
         </video>
       </div>
+      <div class="cta-scroll" onclick="document.getElementById('calendly').scrollIntoView({ behavior: 'smooth' });">
+        <p>Check how I can help you</p>
+        <img src="arrow down.svg" alt="Arrow down" class="arrow-icon" />
+      </div>
 
-<!--     <button onclick="document.getElementById('calendly').scrollIntoView({ behavior: 'smooth' });">Book a call with me</button> --> 
     </section>
 
     <section id="calendly">
@@ -307,9 +351,9 @@
            style="min-width:320px;height:800px;"></div>
       <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </section>
-
+<!--
     <section id="story" class="story-section">
-      <h2>Twoja historia w 4 krokach</h2>
+      <h2 class="gradient-text">Twoja historia w 4 krokach</h2>
       <div class="story-grid">
         <div class="story-card">
           <h3>Problem</h3>
@@ -329,10 +373,9 @@
         </div>
       </div>
     </section>
-
+-->
     <section id="social-proof-videos" class="social-section">
-      <h2>Opinie klientów – wideo</h2>
-      <p class="section-subtitle">Miejsce na 6 filmów z YouTube (3 kolumny × 2 wiersze).</p>
+      <h2 class="gradient-text">Testimonials from my mentees</h2>
       <div class="social-grid">
         <div class="social-item">
           <div class="social-item-title">Tytuł wideo 1</div>
@@ -362,7 +405,7 @@
     </section>
 
     <section id="cta-mid" class="social-section cta-section">
-      <h2>Gotowy, żeby zrobić kolejny krok?</h2>
+      <h2 class="gradient-text">Ready to take it to the next level?</h2>
       <p class="section-subtitle">Umów darmową konsultację i zobacz, jak możemy Ci pomóc.</p>
       <button onclick="document.getElementById('calendly').scrollIntoView({ behavior: 'smooth' });">
         Umów darmową konsultację
@@ -370,8 +413,7 @@
     </section>
 
     <section id="social-proof-gallery" class="social-section">
-      <h2>Rezultaty klientów – zrzuty ekranu</h2>
-      <p class="section-subtitle">Miejsce na 9 zrzutów ekranu / zdjęć (3 kolumny × 3 wiersze).</p>
+      <h2 class="gradient-text">The results of my mentees</h2>
       <div class="social-grid">
         <div class="social-item">
           <div class="social-item-title">Case study 1</div>
@@ -413,37 +455,37 @@
     </section>
 
     <section id="faq" class="faq-section">
-      <h2>Najczęściej zadawane pytania</h2>
+      <h2>FAQ</h2>
       <div class="faq-list">
         <details class="faq-item">
-          <summary>Jak wygląda darmowa konsultacja?</summary>
-          <p>Podczas 30–45 minutowego spotkania analizujemy Twoją sytuację, cele i pokazujemy możliwe scenariusze współpracy.</p>
+          <summary>What does a free consultation look like?</summary>
+          <p>During a 30-45 minute meeting, we analyze your situation, goals, and show possible collaboration scenarios.</p>
         </details>
         <details class="faq-item">
-          <summary>Czy konsultacja do czegoś zobowiązuje?</summary>
-          <p>Nie. Po rozmowie możesz samodzielnie wdrożyć wskazówki lub zdecydować się na dalszą współpracę.</p>
+          <summary>Does a consultation commit you to anything?</summary>
+          <p>No. After the conversation, you can implement the suggestions on your own or choose to continue working together.</p>
         </details>
         <details class="faq-item">
-          <summary>Dla kogo jest ta oferta?</summary>
-          <p>Dla osób, które chcą świadomie inwestować budżet w rozwój swojego biznesu i oczekują konkretnych efektów.</p>
+          <summary>Who is this offer for?</summary>
+          <p>For those who want to consciously invest their budget in the growth of their business and expect concrete results.</p>
         </details>
         <details class="faq-item">
-          <summary>Co jeśli termin mi nie pasuje?</summary>
-          <p>Zawsze możesz przełożyć spotkanie, korzystając z linku w mailu potwierdzającym rezerwację.</p>
+          <summary>What if the appointment doesn't suit me?</summary>
+          <p>You can always reschedule the meeting using the link in the confirmation email.</p>
         </details>
       </div>
     </section>
 
     <section id="cta-final" class="social-section cta-section">
-      <h2>Gotowy, żeby zacząć?</h2>
-      <p class="section-subtitle">Zarezerwuj darmową konsultację i sprawdź, czy to dla Ciebie.</p>
+      <h2>Ready to take the action?</h2>
+      <p class="section-subtitle">Book a call with me and see if it's right for you</p>
       <button onclick="document.getElementById('calendly').scrollIntoView({ behavior: 'smooth' });">
-        Umów darmową konsultację
+        Book a call
       </button>
     </section>
 
     <footer class="footer">
-      <p>© 2025 <a href="https://instagram.com/artur.sliva" target="_blank" rel="noopener noreferrer">Artur Śliwa</a> - Wszystkie prawa zastrzeżone.</p>
+      <p>© 2025 <a href="https://instagram.com/artur.sliva" target="_blank" rel="noopener noreferrer">Artur Śliwa</span></a> - All rights reserved.</p>
     </footer>
   </div>
 </body>
